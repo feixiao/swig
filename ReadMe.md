@@ -16,22 +16,37 @@ make -j 4 && sudo make install
 ```
 
 #### 使用入门
-##### SWIG:Examples:Go
-The following examples illustrate the use of SWIG with Go.
-+ [simple](./go/simple/ReadMe.md)  A minimal example showing how SWIG can
-be used to wrap a C function, a global variable, and a constant.
-+ [constants](./go/constants/ReadMe.md) This shows how preprocessor macros and
-certain C declarations are turned into constants.
-+ [variables](./go/variables/ReadMe.md) An example showing how to access C global variables from Go.
-+ [enum](./go/enum/ReadMe.md) Wrapping enumerations.
-+ [class](./go/class/ReadMe.md) Wrapping a simple C++ class.
-+ [reference](./go/reference/ReadMe.md) C++ references.
-+ [pointer](./go/pointer/ReadMe.md) Simple pointer handling.
-+ [funcptr](./go/funcptr/ReadMe.md)  Pointers to functions.
-+ [template](./go/template/ReadMe.md) C++ templates.
-+ [callback](./go/callback/ReadMe.md) C++ callbacks using directors.
-+ [extend](./go/extend/ReadMe.md) Polymorphism using directors.
-+ [director](./go/director/ReadMe.md)  Example how to utilize the director feature.
+##### 指导go使用swig的例子
++ [simple](./go/simple)  C函数和全局变量的使用。
+    ```
+    cd ./go/simple/example
+    swig -go -cgo -intgosize 64 example.i   
+
+    go build 
+    ```
++ [constants](./go/constants) 常量的使用。
+    ```
+    cd ./go/constants/example
+    swig -go -cgo -intgosize 64 example.i   
+
+    go build 
+    ```
++ [variables](./go/variables) An example showing how to access C global variables from Go.
+    ```
+    cd ./go/variables/example
+    swig -go -cgo -intgosize 64 example.i   
+
+    go build 
+    ```
++ [enum](./go/enum) Wrapping enumerations.
++ [class](./go/class) Wrapping a simple C++ class.
++ [reference](./go/reference) C++ references.
++ [pointer](./go/pointer) Simple pointer handling.
++ [funcptr](./go/funcptr)  Pointers to functions.
++ [template](./go/template) C++ templates.
++ [callback](./go/callback) C++ callbacks using directors.
++ [extend](./go/extend) Polymorphism using directors.
++ [director](./go/director)  Example how to utilize the director feature.
 
 #### 参考资料
 + [《go通过swig封装、调用c++共享库的技术总结》](https://www.cnblogs.com/terencezhou/p/10059156.html)
