@@ -31,15 +31,27 @@ make -j 4 && sudo make install
 
     go build 
     ```
-+ [variables](./go/variables) An example showing how to access C global variables from Go.
++ [variables](./go/variables) 演示怎么从Go访问C的全局变量
     ```
     cd ./go/variables/example
     swig -go -cgo -intgosize 64 example.i   
 
     go build 
     ```
-+ [enum](./go/enum) Wrapping enumerations.
++ [enum](./go/enum) 枚举类型封装
+    ```
+    cd ./go/enum/example
+    swig -go -cgo -c++ -intgosize 64 example.i  
+
+    go build 
+    ```
 + [class](./go/class) Wrapping a simple C++ class.
+    ```
+    cd ./go/class/example
+    swig -go -cgo -c++ -intgosize 64 -cgo example.i   
+
+    go build 
+    ```
 + [reference](./go/reference) C++ references.
 + [pointer](./go/pointer) Simple pointer handling.
 + [funcptr](./go/funcptr)  Pointers to functions.
