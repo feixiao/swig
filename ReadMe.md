@@ -29,37 +29,37 @@ make -j 4 && sudo make install
     swig -go -cgo -intgosize 64 example.i   
     go build 
     ```
-+ [variables](./go/variables) 演示怎么从Go访问C的全局变量
++ [variables](./go/variables) 演示怎么从Go访问C的全局变量。。
     ```
     cd ./go/variables/example
     swig -go -cgo -intgosize 64 example.i   
     go build
     ```
-+ [enum](./go/enum) 枚举类型封装
++ [enum](./go/enum) 枚举类型封装。
     ```
     cd ./go/enum/example
     swig -go -cgo -c++ -intgosize 64 example.i  
     go build
     ```
-+ [class](./go/class) C++类
++ [class](./go/class) C++类。
     ```
     cd ./go/class/example
     swig -go -cgo -c++ -intgosize 64 example.i   
     go build
     ```
-+ [reference](./go/reference) C++引用
++ [reference](./go/reference) C++引用。
     ```
     cd ./go/reference/example
     swig -go -cgo -c++ -intgosize 64 example.i   
     go build
     ```
-+ [pointer](./go/pointer) 简单的指针操作.
++ [pointer](./go/pointer) 简单的指针操作。
     ```
     cd ./go/pointer/example
     swig -go -cgo -intgosize 64 example.i
     go build
     ```
-+ [funcptr](./go/funcptr) 函数指针.
++ [funcptr](./go/funcptr) 函数指针。
     ```
     cd ./go/funcptr/example
     swig -go -cgo -intgosize 64 example.i
@@ -71,9 +71,24 @@ make -j 4 && sudo make install
     swig -go -cgo -c++ -intgosize 64 example.i
     go build
     ```
-+ [callback](./go/callback) C++ callbacks using directors.
-+ [extend](./go/extend) Polymorphism using directors.
-+ [director](./go/director)  Example how to utilize the director feature.
++ [callback](./go/callback)  利用directors使用C++回调函数。
+    ```
+    cd ./go/callback/example
+    swig -go -cgo -c++ -intgosize 64 example.i
+    go build
+    ```
++ [extend](./go/extend) 利用directors使用C++多态。
+    ```
+    cd ./go/extend/example
+    swig -go -cgo -c++ -intgosize 64 example.i
+    go build
+    ```
++ [director](./go/director)  如何利用utilize特性。
+    ```
+    cd ./go/director/example
+    swig -go -cgo -c++ -intgosize 64 example.i
+    go build
+    ```
 
 #### 参考资料
 + [《go通过swig封装、调用c++共享库的技术总结》](https://www.cnblogs.com/terencezhou/p/10059156.html)
