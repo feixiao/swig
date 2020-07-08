@@ -6,6 +6,7 @@ SWIG是一个软件开发工具，它将用C和c++编写的程序与各种高级
 + [文档](http://www.swig.org/Doc3.0/Contents.html#Contents)
 
 #### SWIG安装
++ Mac/Ubuntu
 ```shell
 sudo apt-get install bison 
 
@@ -13,6 +14,13 @@ unzip swig-rel-3.0.12.zip
 cd   swig-rel-3.0.12
 ./autogen.sh  && ./configure
 make -j 4 && sudo make install
+```
++ Windows 10
+```shell
+# swig windows版本
+https://sourceforge.net/projects/swig/files/swigwin
+# 解压然后添加环境变量即可
+windows不支持cgo,所以此路不通
 ```
 
 #### 使用入门
